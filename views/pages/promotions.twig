@@ -1,0 +1,14 @@
+{{ include('partials/header.twig') }}
+	{% for _promotion in promotions %}
+		<div class="card">
+			<div class="card-content">
+				<h3>{{_promotion.name}}</h3>
+				<h5>{{_promotion.description}}</h5>
+				<p>Année d'obtention du diplôme : {{_promotion.graduation_year}}</p>
+			</div>
+			<div class="card-action">
+				<a href="{{url('promotion',{id:_promotion.id})}}">Voir les étudients</a>
+			</div>
+			</div>
+	{% endfor %}
+{{ include('partials/footer.twig') }}

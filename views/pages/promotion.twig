@@ -1,0 +1,12 @@
+{{ include('partials/header.twig') }}
+	{% for _student in students %}
+		<div>
+			<ul>
+				<li>
+					<a href="{{url('student',{id:_student.id})}}">{{_student.first_name}} {{_student.last_name}}</a>
+				</li>
+			</ul>
+			
+		</div>
+	{% endfor %}
+{{ include('partials/footer.twig') }}

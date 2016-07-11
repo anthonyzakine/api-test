@@ -1,0 +1,33 @@
+{{ include('partials/header.twig') }}
+	{{ form_start(contact_form) }}
+	<br>
+	<br>
+	<div class="row">
+	        <div class="input-field col s12">
+	            {{ form_label(contact_form.first_name) }}
+	            {{ form_widget(contact_form.first_name,{attr:{placeholder:'John'}}) }}
+	            <div class="red-text text-darken-3">
+	                {{ form_errors(contact_form.first_name) }}
+	            </div>
+	        </div>
+	        <div class="input-field col s12">
+	            {{ form_label(contact_form.email) }}
+	            {{ form_widget(contact_form.email,{attr:{placeholder:'john@gmail.com'}}) }}
+	            <div class="red-text text-darken-3">
+	                {{ form_errors(contact_form.email) }}
+	            </div>
+	        </div>
+	        <div class="input-field col s12">
+	            {{ form_label(contact_form.message) }}
+	            {{ form_widget(contact_form.message,{attr:{placeholder:'John est sympa'}}) }}
+	            <div class="red-text text-darken-3">
+	                {{ form_errors(contact_form.message) }}
+	            </div>
+	        </div>
+
+	         <div class="input-field col s12">
+	            {{ form_widget(contact_form.submit,{attr:{class:'btn'}}) }}
+	        </div>
+	</div>
+	{{ form_end(contact_form) }}
+{{ include('partials/footer.twig') }}
