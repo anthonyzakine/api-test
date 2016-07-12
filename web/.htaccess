@@ -1,6 +1,6 @@
 Options -MultiViews
 
 RewriteEngine On
-RewriteBase /ATLAN_Yohan_Developpement_web/web/
+RewriteBase /api-test/web/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
