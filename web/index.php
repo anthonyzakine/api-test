@@ -19,16 +19,16 @@
 	// URL GENERATOR
 	$app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
-	// $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-	// 	'db.options' => array (
- //        	'driver'    => 'pdo_mysql',
- //        	'host'      => 'localhost',
- //        	'dbname'    => 'partiel_silex',
- //        	'user'      => 'root',
- //        	'password'  => 'root',
- //        	'charset'   => 'utf8'
- //    	),
-	// ));
+	$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+		'db.options' => array (
+        	'driver'    => 'pdo_mysql',
+        	'host'      => 'localhost',
+        	'dbname'    => 'partiel_silex',
+        	'user'      => 'root',
+        	'password'  => 'root',
+        	'charset'   => 'utf8'
+    	),
+	));
 
 // 	$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
 //     'db.options' => array (
@@ -51,16 +51,16 @@
 //     ),
 // ));
 
-	$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-		'db.options' => array (
-        	'driver'    => 'pdo_mysql',
-        	'host'      => 'azakinechttest.mysql.db',
-        	'dbname'    => 'azakinechttest',
-        	'user'      => 'azakinechttest',
-        	'password'  => 'Testtest01',
-        	'charset'   => 'utf8'
-    	),
-	));
+	// $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+	// 	'db.options' => array (
+ //        	'driver'    => 'pdo_mysql',
+ //        	'host'      => 'azakinechttest.mysql.db',
+ //        	'dbname'    => 'azakinechttest',
+ //        	'user'      => 'azakinechttest',
+ //        	'password'  => 'Testtest01',
+ //        	'charset'   => 'utf8'
+ //    	),
+	// ));
 
 	$app['db']->setFetchMode(PDO::FETCH_OBJ);
 
